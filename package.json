@@ -1,0 +1,22 @@
+{
+  "name": "tanuki",
+  "version": "1.0.0",
+  "description": "Sports Stats",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.4.2",
+    "bootstrap": "^3.3.5",
+    "csvtojson": "^0.4.1",
+    "ng-table": "^0.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://derFBeste@bitbucket.org/derFBeste/tanuki.git"
+  },
+  "author": "Fred Besteman",
+  "license": "ISC"
+}

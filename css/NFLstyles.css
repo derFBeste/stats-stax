@@ -1,0 +1,40 @@
+/**{
+	outline: 1px solid purple;
+}*/
+
+html{
+	font-size: 100%;
+	line-height: 1;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;	
+}
+
+header{
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+
+nav{
+	text-align: center;
+	padding-top: 20px;
+}
+
+table{
+
+
+}
+
+footer{
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+h1{
+	text-align: center;
+}
+
+.ng-table{
+	    border: 1px solid #000000;
+}
