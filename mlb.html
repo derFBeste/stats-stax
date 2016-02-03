@@ -6,15 +6,15 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-<!--     <script src="node_modules/bootstrap/dist/css/bootstrap.min.css"></script>    
+<!--     <script src="node_modules/bootstrap/dist/css/bootstrap.min.css"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/ng-table/dist/ng-table.min.js"></script>
     <script src="node_modules/ng-table/dist/ng-table.min.css"></script>
 
-    <!--     <link href="css/readable/bootstrap.css" rel="stylesheet" type="text/css">  
+    <!--     <link href="css/readable/bootstrap.css" rel="stylesheet" type="text/css">
  -->
-    <link href="css/MLBstyles.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css' />
 
     <script src="js/functions.js"></script>
@@ -23,147 +23,142 @@
     <title>tanuki: MLB</title>
 </head>
 
-<body lang="en" class="container" ng-app="MLBStats" ng-controller="MLBController">
+<body class="container-fluid" lang="en" ng-app="MLBStats" ng-controller="MLBController">
+    <h1>MLB</h1>
     <section id="nav">
         <nav>
             TEAM | PITCHING | BATTING | WEATHER
         </nav>
     </section>
     <header class="row">
-        <img id="ALlogo" src="assets/AL_logo.png" alt="NL logo">
-        <a id="todaysGames" href="http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2015_06_28_chnmlb_slnmlb_1&partnerId=LR_preview#game_state=Pregame" target="_blank">Jeux Du Jour</a>
-        <img id="NLlogo" src="assets/NL_logo.png" alt="AL logo" align="right">
     </header>
-    <div class="row">
-        <div class="col-md-10">
-            <h4>Team Stats</h4>
-            <section class="row" id="team">
-                <div class="col-md-4" id="bestBattingVs"></div>
-                <div class="col-md-4" id="bestPitchingVs"></div>
-                <div class="col-md-4">
-                    <div id="bestRecord">
-                    </div>
-                    <div id="worstRecord">
-                    </div>
-                </div>
-            </section>
-            <h4>Pitching</h4>
-            <section class="row" id="pitching">
-                <div class="col-md-6" id="pitchersDaily"></div>
-                <div class="col-md-6">
-                    <table ng-table="tableParams" class="table variables-matrix input-arguments" id="pitcherBestStats">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>WHIP</th>
-                                <th>K/IP</th>
-                                <th>IP/G</th>
-                            </tr>
-                        </thead>
-                        <tr ng-repeat="player in bestPitchers">
-                            <td>{{player.playerName}}</td>
-                            <td>{{player.WHIP}}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>                        
-                    </table>
-                    <div id="pitcherWorstStats"></div>
-                </div>
-            </section>
-            <h4>Batting</h4>
-            <section class="row" id="batting">
-                <div class="col-md-6" id="battersDaily">
-                    
-                </div>
+    <section id="mlbStats">
+      <div class="row">
+          <div class="col-md-10">
+              <h4>Team Stats</h4>
+              <section class="row" id="team">
+                  <div class="col-md-4" id="bestBattingVs"></div>
+                  <div class="col-md-4" id="bestPitchingVs"></div>
+                  <div class="col-md-4">
+                      <div id="bestRecord">
+                      </div>
+                      <div id="worstRecord">
+                      </div>
+                  </div>
+              </section>
+              <h4>Pitching</h4>
+              <section class="row" id="pitching">
+                  <div class="col-md-6" id="pitchersDaily"></div>
+                  <div class="col-md-6">
+                      <table ng-table="tableParams" class="table variables-matrix input-arguments" id="pitcherBestStats">
+                          <thead>
+                              <tr>
+                                  <th></th>
+                                  <th>WHIP</th>
+                                  <th>K/IP</th>
+                                  <th>IP/G</th>
+                              </tr>
+                          </thead>
+                          <tr ng-repeat="player in bestPitchers">
+                              <td>{{player.playerName}}</td>
+                              <td>{{player.WHIP}}</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                          </tr>
+                      </table>
+                      <div id="pitcherWorstStats"></div>
+                  </div>
+              </section>
+              <h4>Batting</h4>
+              <section class="row" id="batting">
+                  <div class="col-md-6" id="battersDaily">
 
-                <div class="col-md-6">
-                    <table ng-table="tableParams" class="table variables-matrix input-arguments" id="batterBestStats">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>SLG</th>
-                                <th>OPS</th>
-                                <th>HR</th>
-                            </tr>
-                        </thead>
-                        <tr ng-repeat="player in bestBats">
-                            <td>{{player.playerName}}</td>
-                            <td>{{player.OPS}}</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
+                  </div>
 
-                    <div id="batterWorstStats"></div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-2" id="rotoworldFeed">
-            <!-- start feedwind code -->
-            <script type="text/javascript">
-            document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');
-            </script>
-            <script type="text/javascript">
-            (function() {
-                var params = {
-                    rssmikle_url: "http://www.rotoworld.com/rss/feed.aspx?sport=mlb&ftype=news&count=12&format=rss",
-                    rssmikle_frame_width: "150",
-                    rssmikle_frame_height: "800",
-                    frame_height_by_article: "0",
-                    rssmikle_target: "_blank",
-                    rssmikle_font: "Arial, Helvetica, sans-serif",
-                    rssmikle_font_size: "12",
-                    rssmikle_border: "off",
-                    responsive: "off",
-                    rssmikle_css_url: "",
-                    text_align: "left",
-                    text_align2: "left",
-                    corner: "off",
-                    scrollbar: "on",
-                    autoscroll: "off",
-                    scrolldirection: "up",
-                    scrollstep: "3",
-                    mcspeed: "20",
-                    sort: "Off",
-                    rssmikle_title: "on",
-                    rssmikle_title_sentence: "",
-                    rssmikle_title_link: "",
-                    rssmikle_title_bgcolor: "#0066FF",
-                    rssmikle_title_color: "#FFFFFF",
-                    rssmikle_title_bgimage: "",
-                    rssmikle_item_bgcolor: "#FFFFFF",
-                    rssmikle_item_bgimage: "",
-                    rssmikle_item_title_length: "55",
-                    rssmikle_item_title_color: "#0066FF",
-                    rssmikle_item_border_bottom: "on",
-                    rssmikle_item_description: "on",
-                    item_link: "off",
-                    rssmikle_item_description_length: "150",
-                    rssmikle_item_description_color: "#666666",
-                    rssmikle_item_date: "gl1",
-                    rssmikle_timezone: "Etc/GMT",
-                    datetime_format: "%b %e, %Y %l:%M:%S %p",
-                    item_description_style: "text+tn",
-                    item_thumbnail: "full",
-                    item_thumbnail_selection: "auto",
-                    article_num: "15",
-                    rssmikle_item_podcast: "off",
-                    keyword_inc: "",
-                    keyword_exc: ""
-                };
-                feedwind_show_widget_iframe(params);
-            })();
-            </script>
-            <!-- end feedwind code -->
-        </div>
-        <div class="col-md-2" id="links">
-            
+                  <div class="col-md-6">
+                      <table ng-table="tableParams" class="table variables-matrix input-arguments" id="batterBestStats">
+                          <thead>
+                              <tr>
+                                  <th></th>
+                                  <th>SLG</th>
+                                  <th>OPS</th>
+                                  <th>HR</th>
+                              </tr>
+                          </thead>
+                          <tr ng-repeat="player in bestBats">
+                              <td>{{player.playerName}}</td>
+                              <td>{{player.OPS}}</td>
+                              <td></td>
+                              <td></td>
+                          </tr>
+                      </table>
 
+                      <div id="batterWorstStats"></div>
+                  </div>
+              </section>
+          </div>
+          <!-- <div class="col-md-2" id="rotoworldFeed">
+              <!-- start feedwind code -->
+              <!-- <script type="text/javascript">
+              document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');
+              </script>
+              <script type="text/javascript">
+              (function() {
+                  var params = {
+                      rssmikle_url: "http://www.rotoworld.com/rss/feed.aspx?sport=mlb&ftype=news&count=12&format=rss",
+                      rssmikle_frame_width: "150",
+                      rssmikle_frame_height: "800",
+                      frame_height_by_article: "0",
+                      rssmikle_target: "_blank",
+                      rssmikle_font: "Arial, Helvetica, sans-serif",
+                      rssmikle_font_size: "12",
+                      rssmikle_border: "off",
+                      responsive: "off",
+                      rssmikle_css_url: "",
+                      text_align: "left",
+                      text_align2: "left",
+                      corner: "off",
+                      scrollbar: "on",
+                      autoscroll: "off",
+                      scrolldirection: "up",
+                      scrollstep: "3",
+                      mcspeed: "20",
+                      sort: "Off",
+                      rssmikle_title: "on",
+                      rssmikle_title_sentence: "",
+                      rssmikle_title_link: "",
+                      rssmikle_title_bgcolor: "#0066FF",
+                      rssmikle_title_color: "#FFFFFF",
+                      rssmikle_title_bgimage: "",
+                      rssmikle_item_bgcolor: "#FFFFFF",
+                      rssmikle_item_bgimage: "",
+                      rssmikle_item_title_length: "55",
+                      rssmikle_item_title_color: "#0066FF",
+                      rssmikle_item_border_bottom: "on",
+                      rssmikle_item_description: "on",
+                      item_link: "off",
+                      rssmikle_item_description_length: "150",
+                      rssmikle_item_description_color: "#666666",
+                      rssmikle_item_date: "gl1",
+                      rssmikle_timezone: "Etc/GMT",
+                      datetime_format: "%b %e, %Y %l:%M:%S %p",
+                      item_description_style: "text+tn",
+                      item_thumbnail: "full",
+                      item_thumbnail_selection: "auto",
+                      article_num: "15",
+                      rssmikle_item_podcast: "off",
+                      keyword_inc: "",
+                      keyword_exc: ""
+                  };
+                  feedwind_show_widget_iframe(params);
+              })();
+              </script>
+              <!-- end feedwind code -->
+          <!-- </div> -->
 
-
-        </div>
-    </div>
+      </div>
+    </section>
     <section class="row" id="weather">
         <h4>Weather</h4>
     </section>
