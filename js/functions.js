@@ -9,7 +9,7 @@ function csvFileToJson(filename){
 	//Converter Class 
 	var fs = require("fs");
 	var Converter = require("csvtojson").Converter;
-	// var fileStream = fs.createReadStream("../data_store/current_stats/pitching_starters_probable.csv");
+	// var fileStream = fs.createReadStream("../data/current_stats/pitching_starters_probable.csv");
 	var fileStream = fs.createReadStream(filename);
 
 	//new converter instance 
@@ -30,5 +30,5 @@ function csvFileToJson(filename){
 }
 
 // MUST RETURN A JSON OBJECT!!
-var playerStats = csvFileToJson("../data_store/current_stats/pitching_starters_probable.csv");
+var playerStats = csvFileToJson("../data/current_stats/pitching_starters_probable.csv");
 console.log(playerStats);

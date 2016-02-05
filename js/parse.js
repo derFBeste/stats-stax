@@ -6,7 +6,7 @@
 //Converter Class 
 var fs = require("fs");
 var Converter = require("csvtojson").Converter;
-var fileStream = fs.createReadStream("../data_store/current_stats/pitching_starters_probable.csv");
+var fileStream = fs.createReadStream("../data/current_stats/pitching_starters_probable.csv");
 
 //new converter instance 
 var param = {};

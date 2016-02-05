@@ -18,3 +18,4 @@
 
 //   console.log('tanuki app listening at://%s:%s', host, port);
 // });
+var MLBStatsApp = angular.module('MLBStatsApp', []);
