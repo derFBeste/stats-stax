@@ -5,9 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "angular": "^1.4.2",
-    "bootstrap": "^3.3.5",
-    "csvtojson": "^0.4.1",
     "ng-table": "^0.5.4",
+    "angular-route": "1.4.x",
+    "bootstrap": "^3.3.5",
     "express":"4.13.4"
   },
   "devDependencies": {},
