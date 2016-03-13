@@ -1,11 +1,7 @@
-//controller
-var MLBStatsApp = angular.module('MLBStatsApp', []);
-
 MLBStatsApp.controller('MLBController', ['$scope', 'MLBStatService', function($scope, MLBStatService, ngTableParams){
 	console.log('in controller');
 
 }]);
-
 // MLBApp.controller('MLBController', [
 // 		'$scope',
 // 		function($scope, ngTableParams){

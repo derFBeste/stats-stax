@@ -1,6 +1,15 @@
+MLBStatsApp.factory('MLBStatService', function($http){
+		var stats = {content:null}
 
+		$http.get('data/mlb_test.json').success(function(data){
+			stats.content = data;
+			console.log(data);
+		});
 
-// //service to get stats
+		 return stats;
+});
+
+// //service to get stats from .csv
 // angular.module('stats.services', [])
 // 	.service('StatsService', function(){
 // 		this.csvToJson = function(filename){
@@ -28,24 +37,5 @@
 // 		}
 // 	});
 
-MLBStatsApp.factory('MLBStatService', function($http){
-		var stats = {content:null}
-
-		$http.get('data/mlb_test.json').success(function(data){
-			stats.content = data;
-			console.log(data);
-		});
-
-		 return stats;
-});
 
 //service to get daily schedule
-// angular.module('schedule.services', []{
-// 	.service('ScheduleService', function())
-// });
-
-
-
-
-//injects service into controllers
-// angular.module('stats.controllers', ['stats.services']));
