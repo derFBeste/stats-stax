@@ -1,0 +1,192 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'csvtojson' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 silly cache add args [ 'csvtojson', null ]
+5 verbose cache add spec csvtojson
+6 silly cache add parsed spec { raw: 'csvtojson',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'csvtojson',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed csvtojson@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'csvtojson', range: '*', hasData: false }
+11 silly mapToRegistry name csvtojson
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/csvtojson
+15 verbose addNameRange registry:https://registry.npmjs.org/csvtojson not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/csvtojson
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 9:10:59 PM
+19 verbose request id 36b131efdc7c0363
+20 verbose etag "1ED6HOHRFUH97RP7U61RHTTUQ"
+21 http request GET https://registry.npmjs.org/csvtojson
+22 http 200 https://registry.npmjs.org/csvtojson
+23 silly get cb [ 200,
+23 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly get     etag: '"3D3ZO9VXOXPSH5TC2801W6BS1"',
+23 silly get     'content-type': 'application/json',
+23 silly get     'cache-control': 'max-age=60',
+23 silly get     'content-length': '63042',
+23 silly get     'accept-ranges': 'bytes',
+23 silly get     date: 'Sun, 09 Aug 2015 01:11:00 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     age: '0',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-dfw1820-DFW',
+23 silly get     'x-cache': 'MISS',
+23 silly get     'x-cache-hits': '0',
+23 silly get     'x-timer': 'S1439082660.099622,VS0,VE270',
+23 silly get     vary: 'Accept' } ]
+24 verbose get saving csvtojson to /Users/freddybeste/.npm/registry.npmjs.org/csvtojson/.cache.json
+25 silly addNameRange number 2 { name: 'csvtojson', range: '*', hasData: true }
+26 silly addNameRange versions [ 'csvtojson',
+26 silly addNameRange   [ '0.1.0',
+26 silly addNameRange     '0.1.1',
+26 silly addNameRange     '0.1.2',
+26 silly addNameRange     '0.1.3',
+26 silly addNameRange     '0.1.4',
+26 silly addNameRange     '0.1.5',
+26 silly addNameRange     '0.1.6',
+26 silly addNameRange     '0.1.7',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.2.1',
+26 silly addNameRange     '0.2.2',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.3.1',
+26 silly addNameRange     '0.3.2',
+26 silly addNameRange     '0.3.3',
+26 silly addNameRange     '0.3.4',
+26 silly addNameRange     '0.3.5',
+26 silly addNameRange     '0.3.6',
+26 silly addNameRange     '0.3.7',
+26 silly addNameRange     '0.3.8',
+26 silly addNameRange     '0.3.9',
+26 silly addNameRange     '0.3.10',
+26 silly addNameRange     '0.3.11',
+26 silly addNameRange     '0.3.12',
+26 silly addNameRange     '0.3.13',
+26 silly addNameRange     '0.3.14',
+26 silly addNameRange     '0.3.15',
+26 silly addNameRange     '0.3.16',
+26 silly addNameRange     '0.3.17',
+26 silly addNameRange     '0.3.18',
+26 silly addNameRange     '0.3.19',
+26 silly addNameRange     '0.3.20',
+26 silly addNameRange     '0.3.21',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.1',
+26 silly addNameRange     '0.4.2' ] ]
+27 verbose addNamed csvtojson@0.4.2
+28 silly addNamed semver.valid 0.4.2
+29 silly addNamed semver.validRange 0.4.2
+30 silly mapToRegistry name csvtojson
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/csvtojson
+34 verbose addRemoteTarball https://registry.npmjs.org/csvtojson/-/csvtojson-0.4.2.tgz not in flight; adding
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/csvtojson/-/csvtojson-0.4.2.tgz',
+35 verbose addRemoteTarball   'a8b0c6c478bc690ad5e56c3d6ae9bc4d9624e253' ]
+36 info retry fetch attempt 1 at 9:11:00 PM
+37 info attempt registry request try #1 at 9:11:00 PM
+38 http fetch GET https://registry.npmjs.org/csvtojson/-/csvtojson-0.4.2.tgz
+39 http fetch 200 https://registry.npmjs.org/csvtojson/-/csvtojson-0.4.2.tgz
+40 silly fetchAndShaCheck shasum a8b0c6c478bc690ad5e56c3d6ae9bc4d9624e253
+41 verbose addTmpTarball /var/folders/7b/tvfn2mf56hx4y1fcd82m30hr0000gn/T/npm-78698-942c160e/registry.npmjs.org/csvtojson/-/csvtojson-0.4.2.tgz not in flight; adding
+42 verbose addTmpTarball already have metadata; skipping unpack for csvtojson@0.4.2
+43 silly cache afterAdd csvtojson@0.4.2
+44 verbose afterAdd /Users/freddybeste/.npm/csvtojson/0.4.2/package/package.json not in flight; writing
+45 verbose afterAdd /Users/freddybeste/.npm/csvtojson/0.4.2/package/package.json written
+46 silly install resolved [ { name: 'csvtojson',
+46 silly install resolved     description: 'A tool concentrating on converting csv data to JSON with customised parser supporting',
+46 silly install resolved     author: { name: 'Keyang Xiang', email: 'keyang.xiang@gmail.com' },
+46 silly install resolved     homepage: 'http://keyangxiang.com/blog/csv2json/',
+46 silly install resolved     bugs: { url: 'https://github.com/Keyang/node-csvtojson/issues' },
+46 silly install resolved     repository:
+46 silly install resolved      { type: 'git',
+46 silly install resolved        url: 'https://github.com/Keyang/node-csvtojson.git' },
+46 silly install resolved     contributors: [ [Object], [Object] ],
+46 silly install resolved     version: '0.4.2',
+46 silly install resolved     keywords: [ 'csv', 'json', 'convert', 'parser', 'exntendible', 'plugin' ],
+46 silly install resolved     bin: { csvtojson: './bin/csvtojson' },
+46 silly install resolved     license: [ [Object] ],
+46 silly install resolved     engines: { node: '>=0.10' },
+46 silly install resolved     devDependencies:
+46 silly install resolved      { grunt: '^0.4.5',
+46 silly install resolved        'grunt-contrib-jshint': '^0.11.2',
+46 silly install resolved        'grunt-contrib-uglify': '^0.9.1',
+46 silly install resolved        'grunt-contrib-watch': '^0.6.1',
+46 silly install resolved        'grunt-git': '^0.3.5',
+46 silly install resolved        'grunt-madge': '0.0.6',
+46 silly install resolved        'grunt-mocha-test': '^0.12.7',
+46 silly install resolved        'grunt-newer': '^1.1.0',
+46 silly install resolved        imgur: '^0.1.5',
+46 silly install resolved        mocha: '^2.2.5' },
+46 silly install resolved     dependencies: { async: '^1.2.1', underscore: '^1.8.3' },
+46 silly install resolved     gitHead: 'ba6aeaecf23367071a65923b1fe737c9478731e6',
+46 silly install resolved     _id: 'csvtojson@0.4.2',
+46 silly install resolved     scripts: {},
+46 silly install resolved     _shasum: 'a8b0c6c478bc690ad5e56c3d6ae9bc4d9624e253',
+46 silly install resolved     _from: 'csvtojson@*',
+46 silly install resolved     _npmVersion: '1.4.21',
+46 silly install resolved     _npmUser: { name: 'keyang', email: 'keyang.xiang@gmail.com' },
+46 silly install resolved     maintainers: [ [Object] ],
+46 silly install resolved     dist:
+46 silly install resolved      { shasum: 'a8b0c6c478bc690ad5e56c3d6ae9bc4d9624e253',
+46 silly install resolved        tarball: 'http://registry.npmjs.org/csvtojson/-/csvtojson-0.4.2.tgz' },
+46 silly install resolved     directories: {},
+46 silly install resolved     _resolved: 'https://registry.npmjs.org/csvtojson/-/csvtojson-0.4.2.tgz' } ]
+47 info install csvtojson@0.4.2 into /usr/local/lib
+48 info installOne csvtojson@0.4.2
+49 verbose installOne of csvtojson to /usr/local/lib not in flight; installing
+50 verbose lock using /Users/freddybeste/.npm/_locks/csvtojson-02f57ef07f3551e3.lock for /usr/local/lib/node_modules/csvtojson
+51 silly install write writing csvtojson 0.4.2 to /usr/local/lib/node_modules/csvtojson
+52 silly cache addNamed cb csvtojson@0.4.2
+53 verbose unbuild lib/node_modules/csvtojson
+54 silly gentlyRm /usr/local/lib/node_modules/csvtojson is being purged from base /usr/local
+55 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/csvtojson
+56 verbose tar unpack /Users/freddybeste/.npm/csvtojson/0.4.2/package.tgz
+57 verbose tar unpacking to /usr/local/lib/node_modules/csvtojson
+58 silly gentlyRm /usr/local/lib/node_modules/csvtojson is being purged
+59 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/csvtojson
+60 silly gunzTarPerm modes [ '755', '644' ]
+61 error tar.unpack untar error /Users/freddybeste/.npm/csvtojson/0.4.2/package.tgz
+62 verbose unlock done using /Users/freddybeste/.npm/_locks/csvtojson-02f57ef07f3551e3.lock for /usr/local/lib/node_modules/csvtojson
+63 verbose fstream_path /usr/local/lib/node_modules/csvtojson
+64 verbose fstream_type Directory
+65 verbose fstream_class DirWriter
+66 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/csvtojson'
+66 verbose stack     at Error (native)
+67 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+67 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+67 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+68 verbose cwd /Users/freddybeste/webdev/tanuki/js
+69 error Darwin 14.1.0
+70 error argv "node" "/usr/local/bin/npm" "install" "-g" "csvtojson"
+71 error node v0.12.2
+72 error npm  v2.7.4
+73 error path /usr/local/lib/node_modules/csvtojson
+74 error code EACCES
+75 error errno -13
+76 error Error: EACCES, mkdir '/usr/local/lib/node_modules/csvtojson'
+76 error     at Error (native)
+76 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/csvtojson']
+76 error   errno: -13,
+76 error   code: 'EACCES',
+76 error   path: '/usr/local/lib/node_modules/csvtojson',
+76 error   fstream_type: 'Directory',
+76 error   fstream_path: '/usr/local/lib/node_modules/csvtojson',
+76 error   fstream_class: 'DirWriter',
+76 error   fstream_stack:
+76 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+76 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+76 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+77 error Please try running this command again as root/Administrator.
+78 verbose exit [ -13, true ]
+79 verbose unbuild lib/node_modules/csvtojson
+80 silly gentlyRm /usr/local/lib/node_modules/csvtojson is being purged from base /usr/local
+81 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/csvtojson
