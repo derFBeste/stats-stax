@@ -1,6 +1,7 @@
 # sports-stax #
 
 ### Description ###
-* Fantasy Sports Statistics
-* Provides sports stats for NFL, MLB, and NBA
-* 0.1.0
+* Sports Statistics
+* Provides sports stats for MLB
+* In the future it will provide stats for NFL and NBA
+* This is a POC, example app
