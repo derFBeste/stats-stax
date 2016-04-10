@@ -2,19 +2,31 @@
 <html>
 
 <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <!-- <script src="node_modules/ng-table/dist/ng-table.min.js"></script>
+    <script src="node_modules/ng-table/dist/ng-table.min.css"></script> -->
+
+    <!--     <link href="css/readable/bootstrap.css" rel="stylesheet" type="text/css">
+ -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/MLBstyles.css" rel="stylesheet" type="text/css">
+
+    <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css' />
+
+
+    <!-- <script src="js/functions.js"></script> -->
+    <script src="js/controllers/mlbController.js"></script>
+    <script src="js/services/mlbStatsService.js"></script>
+
     <title>tanuki: MLB</title>
 </head>
 
 <body class="container-fluid" lang="en" ng-app="MLBStatsApp" ng-controller="MLBController">
     <h1>MLB</h1>
-
-    <div class="jumbotron text-center">
-        <h1>MLB</h1>
-
-        <p>{{ tagline }}</p>
-    </div>
-
-
     <section id="nav">
         <nav>
             TEAM | PITCHING | BATTING | WEATHER
@@ -24,7 +36,7 @@
     </header>
     <section id="mlbStats">
       <div class="row">
-          <div class="col-md-10">
+          <div class="col-md-12">
               <h4>Team Stats</h4>
               <section class="row" id="team">
                   <div class="col-md-4" id="bestBattingVs"></div>
@@ -148,9 +160,6 @@
           <!-- </div> -->
 
       </div>
-    </section>
-    <section class="row" id="weather">
-        <h4>Weather</h4>
     </section>
     <footer class="row">
         <p>"When you bring the thunder sometimes you get lost in the rain." -KP</p>

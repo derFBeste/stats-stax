@@ -1,15 +1,7 @@
-// MLBStatsApp.controller('MLBController', ['$scope', 'MLBStatService', function($scope, MLBStatService, ngTableParams){
-// 	console.log('in controller');
-//
-// }]);
+MLBStatsApp.controller('MLBController', ['$scope', 'MLBStatService', function($scope, MLBStatService, ngTableParams){
+	console.log('in controller');
 
-angular.module('MLBCtrl', []).controller('MLBController', function($scope) {
-
-    $scope.tagline = 'home run!';
-
-});
-
-
+}]);
 // MLBApp.controller('MLBController', [
 // 		'$scope',
 // 		function($scope, ngTableParams){

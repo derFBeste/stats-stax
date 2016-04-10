@@ -1,22 +1,13 @@
-// MLBStatsApp.factory('MLBStatService', function($http){
-// 		var stats = {content:null}
-//
-// 		$http.get('data/mlb_test.json').success(function(data){
-// 			stats.content = data;
-// 			console.log(data);
-// 		});
-//
-// 		 return stats;
-// });
+MLBStatsApp.factory('MLBStatService', function($http){
+		var stats = {content:null}
 
-angular.module('MLBStatService', []).factory('MLBStats', ['$http', function($http) {
+		$http.get('data/mlb_test.json').success(function(data){
+			stats.content = data;
+			console.log(data);
+		});
 
-    return {
-        getMLBStats : function() {
-            return $http.get('/api/mlb');
-        },
-    }
-}]);
+		 return stats;
+});
 
 // //service to get stats from .csv
 // angular.module('stats.services', [])
