@@ -3,20 +3,30 @@ var express = require('express');
     path = require('path');
 
 var app = express();
-    port = 3000;
+    port = process.env.PORT || 3000;
+
 // var router = express.Router();
 app.use(express.static(__dirname + '/public'));
 var public_dir = './public/';
 
+//Routes to serve views
 app.get('/', function (req, res) {
   res.sendfile(public_dir + 'mlb.html');
 });
 app.get('/mlb', function (req, res) {
   res.sendfile(public_dir + 'mlb.html');
 });
-// app.get('/nfl', function (req, res) {
-//   res.sendfile(public_dir + 'nfl.html');
-// });
+app.get('/nfl', function (req, res) {
+  res.sendfile(public_dir + 'nfl.html');
+});
+
+//Data API
+app.get('/api/stats/pitchers', function (req, res) {
+  res.sendfile('data/mlb_test.json');
+});
+app.get('/api/stats/batters', function (req, res) {
+  res.sendfile('data/mlb_test.json');
+});
 
 var server = app.listen(port, '127.0.0.1', function () {
   var host = server.address().address;

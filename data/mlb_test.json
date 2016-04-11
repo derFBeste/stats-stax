@@ -1,5 +1,4 @@
-{"bestBats":
-  [
+{"bestBats":[
     {"playerName": "Harper",
     "OPS": 1.71},
     {"playerName": "Gold",
@@ -11,7 +10,6 @@
     {"playerName": "Stanton",
     "OPS": 0.952}
   ],
-
     "bestPitchers": [
       {"playerName": "Scherzer",
       "WHIP": 0.80},
