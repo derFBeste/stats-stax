@@ -3,7 +3,6 @@ MLBStatsApp.factory('MLBStatService', function($http){
 
 		$http.get('data/mlb_test.json').success(function(data){
 			stats.content = data;
-			console.log(data);
 		});
 
 		 return stats;
