@@ -56,21 +56,30 @@
               <section class="row" id="pitching">
                   <div class="col-md-6" id="pitchersDaily"></div>
                   <div class="col-md-6">
-                      <table ng-table="tableParams" class="table variables-matrix input-arguments" id="pitcherBestStats">
+                      <table ng-table="tableParams" class="table table-condensed table-bordered table-striped input-arguments variables-matrix" id="pitcherBestStats">
                           <thead>
                               <tr>
-                                  <th></th>
+                                  <th>
+                                  <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default">L</button>
+                                    <button type="button" class="btn btn-default">3</button>
+                                    <button type="button" class="btn btn-default">5</button>
+                                    <button type="button" class="btn btn-default">S</button>
+                                  </div>
+                                    <button type="button" class="btn btn-default" style="float: right">Today</button>
+                                  </th>
                                   <th>WHIP</th>
+                                  <th>Ks</th>
                                   <th>K/IP</th>
-                                  <th>IP/G</th>
+                                  <th>IP/9</th>
                               </tr>
                           </thead>
                           <tr ng-repeat="player in bestPitchers">
                               <td>{{player.playerName}}</td>
-                              <td>{{player.WHIP}}</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td data-title="'WHIP'" sortable="'WHIP'">{{player.WHIP}}</td>
+                              <td>{{player.Ks}}</td>
+                              <td>{{player.KIP}}</td>
+                              <td>{{player.IP9}}</td>
                           </tr>
                       </table>
                       <div id="pitcherWorstStats"></div>
@@ -83,10 +92,17 @@
                   </div>
 
                   <div class="col-md-6">
-                      <table ng-table="tableParams" class="table variables-matrix input-arguments" id="batterBestStats">
+                      <table ng-table="tableParams" class="table table-condensed table-bordered table-striped input-arguments variables-matrix" id="batterBestStats">
                           <thead>
                               <tr>
-                                  <th></th>
+                                  <th>
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                      <button type="button" class="btn btn-default">L</button>
+                                      <button type="button" class="btn btn-default">3</button>
+                                      <button type="button" class="btn btn-default">5</button>
+                                      <button type="button" class="btn btn-default">S</button>
+                                    </div>
+                                  </th>
                                   <th>SLG</th>
                                   <th>OPS</th>
                                   <th>HR</th>
