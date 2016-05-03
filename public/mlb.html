@@ -54,8 +54,36 @@
               </section>
               <h4>Pitching</h4>
               <section class="row" id="pitching">
-                  <div class="col-md-6" id="pitchersDaily"></div>
-                  <div class="col-md-6">
+                  <div class="col-md-6" id="pitcherTeam">
+                    <!-- TODO What are the key stats for team pitching? Relief stats?  Home, away stats? -->
+                    <table ng-table="tableParams" class="table table-condensed table-bordered table-striped input-arguments variables-matrix" id="pitcherBestStats">
+                        <thead>
+                            <tr>
+                                <th>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                  <button type="button" class="btn btn-default">L</button>
+                                  <button type="button" class="btn btn-default">3</button>
+                                  <button type="button" class="btn btn-default">5</button>
+                                  <button type="button" class="btn btn-default">S</button>
+                                </div>
+                                  <button type="button" class="btn btn-default" style="float: right">Today</button>
+                                </th>
+                                <th>WHIP</th>
+                                <th>Ks</th>
+                                <th>K/IP</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tr ng-repeat="player in bestPitchers">
+                            <td>{{team.teamName}}</td>
+                            <td data-title="'WHIP'" sortable="'WHIP'">{{team.WHIP}}</td>
+                            <td>{{team.Ks}}</td>
+                            <td>{{team.KIP}}</td>
+                            <td>{{team.IP9}}</td>
+                        </tr>
+                    </table>
+                  </div>
+                  <div class="col-md-6" id="pitcherIndividual">
                       <table ng-table="tableParams" class="table table-condensed table-bordered table-striped input-arguments variables-matrix" id="pitcherBestStats">
                           <thead>
                               <tr>
@@ -82,12 +110,40 @@
                               <td>{{player.IP9}}</td>
                           </tr>
                       </table>
-                      <div id="pitcherWorstStats"></div>
+                      <div id="pitcherWorstStats">
+                        <!-- TODO Add the top pitchers likely to get shelled -->
+                      </div>
                   </div>
               </section>
               <h4>Batting</h4>
               <section class="row" id="batting">
-                  <div class="col-md-6" id="battersDaily">
+                  <div class="col-md-6" id="batterTeam">
+                    <table ng-table="tableParams" class="table table-condensed table-bordered table-striped input-arguments variables-matrix" id="pitcherBestStats">
+                        <thead>
+                            <tr>
+                                <th>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                  <button type="button" class="btn btn-default">L</button>
+                                  <button type="button" class="btn btn-default">3</button>
+                                  <button type="button" class="btn btn-default">5</button>
+                                  <button type="button" class="btn btn-default">S</button>
+                                </div>
+                                  <button type="button" class="btn btn-default" style="float: right">Today</button>
+                                </th>
+                                <th>R</th>
+                                <th>HR</th>
+                                <th>OPS</th>
+                                <th>Total Offense</th>
+                            </tr>
+                        </thead>
+                        <tr ng-repeat="team in Teams">
+                            <td>{{team.teamName}}</td>
+                            <td data-title="'runs'" sortable="'WHIP'">{{team.runs}}</td>
+                            <td>{{team.homeRuns}}</td>
+                            <td>{{team.ops}}</td>
+                            <td>{{team.totalOffense}}</td>
+                        </tr>
+                    </table>
 
                   </div>
 
@@ -102,6 +158,7 @@
                                       <button type="button" class="btn btn-default">5</button>
                                       <button type="button" class="btn btn-default">S</button>
                                     </div>
+                                    <button type="button" class="btn btn-default" style="float: right">Today</button>
                                   </th>
                                   <th>SLG</th>
                                   <th>OPS</th>

@@ -8,7 +8,7 @@ html{
 	line-height: 1;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;	
+    -webkit-text-size-adjust: 100%;
 }
 
 nav{
@@ -28,13 +28,13 @@ footer{
 
 
 #ALlogo{
-	max-height: 90px; 
+	max-height: 90px;
 	max-width: 90px;
 	padding: 5px;
 }
 
 #NLlogo{
-	max-height: 90px; 
+	max-height: 90px;
 	max-width: 90px;
 	padding: 5px;
 }
@@ -44,23 +44,21 @@ footer{
 }
 
 #pitching{
-	border: 2px solid #A9A9A9;
-	background-color: #F5F5F5;
+
 }
 
 #batting{
-	border: 2px solid #A9A9A9;
-	background-color: #F5F5F5;
+
 }
 
 
 .ng-table{
-	    border: 1px solid #000000;
+
 }
 
 /*.gridStyle {
     border: 1px solid rgb(212,212,212);
-    width: 400px; 
+    width: 400px;
     height: 300px
 }*/
 
