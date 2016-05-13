@@ -16,7 +16,7 @@ var public_dir = './public/';
 
 //Routes to serve views
 app.get('/', function (req, res) {
-  res.sendfile(public_dir + 'mlb.html');
+  res.sendfile(public_dir + 'index.html');
 });
 app.get('/mlb', function (req, res) {
   res.sendfile(public_dir + 'mlb.html');
