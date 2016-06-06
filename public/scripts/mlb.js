@@ -6,9 +6,11 @@
 
 var MLBStats = React.createClass({
   render: function() {
+    var date = new Date();
+
     return (
       <div className="mlbStats">
-        <GamesToday />
+        <GamesToday date={date.toDateString()} url="api/games"/>
         <TeamStats />
         <PitcherStats />
         <BatterStats />
@@ -18,10 +20,52 @@ var MLBStats = React.createClass({
 });
 
 var GamesToday = React.createClass({
+  getInitialState: function() {
+    return {data: []};
+  },
+  getDefaultProps: function() {
+
+  },
+  componentDidMount: function() {
+    $.ajax({
+      url: this.props.url,
+      dataType: 'json',
+      cache: false,
+      success: function(data) {
+        this.setState({data: data.games});
+
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.url, status, err.toString());
+      }.bind(this)
+    });
+  },
   render: function() {
     return (
       <div className="gamesToday">
-        <h1>tile list of todays games</h1>
+        {this.props.date}
+        <GameTile data={this.state.data}/>
+      </div>
+    );
+  }
+});
+
+//make game tiles component
+var GameTile = React.createClass({
+  //TODO Add styles
+  render: function(data) {
+    var games = null;
+    var games = this.props.data.map(function(game){
+        return (
+          <div key={game.id}>
+            {game.away} vs {game.home}
+            <div>{game.time}</div>
+          </div>
+        );
+    });
+    return (
+      <div className="gameTile">
+        {games}
       </div>
     );
   }
@@ -37,7 +81,6 @@ var TeamStats = React.createClass({
     );
   }
 });
-
 
 var PitcherStats = React.createClass({
   render: function() {
@@ -60,6 +103,32 @@ var BatterStats = React.createClass({
 });
 
 ReactDOM.render(
-  <MLBStats />,
+  <MLBStats/>,
   document.getElementById('content')
 );
+
+
+
+
+//Example snippet that mimics ng-repeat, do someting simiar to repeat game tiles
+// var RepeatModule = React.createClass({
+//   getDefaultProps: function() {
+//     return { items: [] }
+//   },
+//   render: function() {
+//
+//     var listItems = this.props.items.map(function(item) {
+//       return (
+//         <li key="{item.name}">
+//           <a href="{item.link}">{item.name}</a>
+//         </li>
+//       );
+//     });
+//
+//     return (
+//         <ul>
+//           {listItems}
+//         </ul>
+//     );
+//   }
+// });
