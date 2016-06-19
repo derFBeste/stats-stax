@@ -28,11 +28,11 @@ app.get('/nfl', function(req, res) {
 //Data API
 app.get('/api/stats/pitchers', function(req, res) {
     //TODO change to db call
-    res.sendfile('data/mlb_test.json');
+    res.sendfile('data/mlb_test_pitchers.json');
 });
 app.get('/api/stats/batters', function(req, res) {
     //TODO change to db call
-    res.sendfile('data/mlb_test.json');
+    res.sendfile('data/mlb_test_batters.json');
 });
 app.get('/api/games', function(req, res) {
     //TODO change to db call

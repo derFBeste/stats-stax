@@ -1,0 +1,18 @@
+{
+    "bestPitchers": [{
+        "playerName": "Scherzer",
+        "WHIP": 0.80
+    }, {
+        "playerName": "Greinke",
+        "WHIP": 0.82
+    }, {
+        "playerName": "deGrom",
+        "WHIP": 0.92
+    }, {
+        "playerName": "Hammel",
+        "WHIP": 0.95
+    }, {
+        "playerName": "Cueto",
+        "WHIP": 0.95
+    }]
+}

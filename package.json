@@ -6,7 +6,10 @@
   "dependencies": {
     "ng-table": "^0.5.4",
     "express": "4.13.4",
-    "dateformat": "^1.0.12"
+    "dateformat": "^1.0.12",
+    "angular": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-route": "^1.4.0"
   },
   "devDependencies": {
   },
