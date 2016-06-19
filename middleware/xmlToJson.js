@@ -1,29 +1,6 @@
-var request=require("request");
+const request=require("request");
 
-
-//TODO write middleware that parses data from url below to json, write that json to mongodb
-
-var input = getGameInfo();
-console.log("input :" + input);
-var jsonData = xmlToJson(input);
-console.log("json :" + jsonData);
-
-function getGameInfo(){
-    var data;
-    var date = new Date();
-    day = date.getDate();
-    month = date.getMonth() + 1;
-
-    request.get('http://gd2.mlb.com/components/game/mlb/year_2016/month_0'+ month +'/day_' + day +'/playertracker.xml',function(error,response,body){
-                   if(error){
-                         console.log(error);
-                   }else{
-                       data = response;
-
-                 }
-    });
-    return data;
-}
+//TODO write middleware that parses data from xml to json
 
 // Changes XML to JSON
 function xmlToJson(xml) {

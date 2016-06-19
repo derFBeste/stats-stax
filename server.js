@@ -1,11 +1,11 @@
 //requires
-var express = require('express');
-path = require('path');
+const express = require('express');
+var path = require('path');
 
-var app = express();
-port = process.env.PORT || 3000;
+const app = express();
+var port = process.env.PORT || 3000;
 
-var request=require("request");
+const request=require("request");
 
 //TODO add bodyparser
 //TODO update for REACT
@@ -41,32 +41,10 @@ app.get('/api/games', function(req, res) {
     res.sendfile('data/games_test.json');
 });
 app.get('/api/today-info', function(req, res) {
-    var date = new Date();
-    day = date.getDate();
-    month = date.getMonth() + 1;
-
-    //TODO change to db call
-    request.get('http://gd2.mlb.com/components/game/mlb/year_2016/month_0'+ month +'/day_' + day +'/master_scoreboard.json',function(error,response,body){
-               if(error){
-                     console.log(error);
-               }else{
-                     console.log(response);
-             }
-    });
+    res.sendfile('data/todays_games.json');
 });
 app.get('/api/tomorrow-info', function(req, res) {
-    var date = new Date();
-    day = date.getDate();
-    month = date.getMonth() + 1;
 
-    //TODO change to db call
-    request.get('http://gd2.mlb.com/components/game/mlb/year_2016/month_0'+ month +'/day_' + day +'/master_scoreboard.json',function(error,response,body){
-               if(error){
-                     console.log(error);
-               }else{
-                     console.log(response);
-             }
-    });
 });
 
 var server = app.listen(port, '127.0.0.1', function() {
